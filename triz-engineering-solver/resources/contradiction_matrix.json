@@ -1,0 +1,33 @@
+{
+  "$schema_description": "Altshuller TRIZ Contradiction Matrix (39x39). Each cell maps an (improving_parameter, worsening_parameter) pair to a ranked list of recommended Inventive Principle IDs (1-40). Diagonal cells (improving == worsening) are conventionally empty.",
+  "meta": {
+    "axes": {
+      "rows": "improving_parameter_id (1-39, see resources/39_parameters.md)",
+      "cols": "worsening_parameter_id (1-39, see resources/39_parameters.md)"
+    },
+    "principle_reference": "resources/40_principles.md",
+    "cell_format": "cells['<row>,<col>'] = [principle_id, ...] in descending suggested order, or null if not populated.",
+    "completeness": "partial",
+    "populated_anchor_cells": 15,
+    "total_cells": 1482,
+    "source_note": "The 15 anchor cells below are widely cited in TRIZ literature (Altshuller 1985; Mann 2003). For the full matrix, source from an authoritative reference. For unpopulated cells, the skill agent should reason directly over the 40 principles and clearly mark the suggestion as `Source: inferred` rather than `Source: matrix`.",
+    "primary_source": "Altshuller, G.S. (1985). Contradiction Matrix, full table in 'Creativity as an Exact Science' (Russian original 1979, English 1984)."
+  },
+  "cells": {
+    "1,3":  [15, 8, 29, 34],
+    "1,9":  [2, 8, 15, 38],
+    "1,10": [8, 10, 18, 37],
+    "1,14": [28, 27, 18, 40],
+    "1,27": [3, 11, 1, 27],
+    "1,39": [35, 3, 24, 37],
+    "9,1":  [2, 28, 13, 38],
+    "9,14": [8, 3, 26, 14],
+    "9,17": [28, 30, 36, 2],
+    "10,1": [8, 1, 37, 18],
+    "10,11":[18, 21, 11],
+    "14,1": [1, 8, 40, 15],
+    "17,9": [28, 30, 36, 2],
+    "27,1": [3, 8, 10, 40],
+    "39,27":[1, 35, 10, 38]
+  }
+}

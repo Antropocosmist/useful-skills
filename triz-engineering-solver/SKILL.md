@@ -63,7 +63,7 @@ Physical contradictions are typically resolved by **separation** in space, time,
 4. For each suggested principle, retrieve its full description and sub-principles from `resources/40_principles.md`.
 5. Apply the principles to the concrete system to generate candidate solutions.
 
-> **Note**: `resources/contradiction_matrix.json` ships with a structural skeleton and a populated set of well-documented canonical cells. For cells marked `null`, fall back to reasoning over the 40 principles directly, and clearly flag in the output that the suggestion is LLM-inferred rather than matrix-derived. Authoritative full matrices are published in Altshuller (1985) and Mann (2003).
+> **Note**: `resources/contradiction_matrix.json` contains the full Altshuller 39×39 matrix (1190 populated cells; 292 cells are legitimately empty in the original — Altshuller's patent analysis found no dominant principle for those contradictions). For empty cells, fall back to reasoning over the 40 principles directly and mark the suggestion as `Source: inferred` rather than `Source: matrix`. See the JSON `meta.primary_source` for transcription provenance.
 
 ### Step 4 — Su-Field (Substance–Field) analysis
 
@@ -187,15 +187,16 @@ Please fill the gaps so I can generate inventive concepts.
 
 - `examples/brake_disc.md` — automotive brake disc (friction vs heat dissipation). Mechanical / thermal contradiction; canonical TRIZ recovery of the ventilated-disc industry solution from first principles.
 - `examples/battery_pack.md` — EV battery pack (energy density vs thermal safety). Electromechanical, contemporary; demonstrates the *physical contradiction* path via separation-by-condition and the 76 Standard Solutions.
+- `examples/heat_exchanger_fouling.md` — petrochemical heat exchanger (fouling vs pressure-drop). Process-industry contradiction; demonstrates the **30→22** harm-versus-energy-loss pattern, Su-Field Class 1.2 destruction routing, and the ideality drop rule (one concept eliminated).
 - `examples/anti_example_misframed.md` — UX onboarding flow (out-of-scope). Demonstrates the **refuse-with-reframe** behaviour when the problem is not engineering.
 
 ## Resources
 
 - `resources/39_parameters.md` — the 39 engineering parameters with definitions
 - `resources/40_principles.md` — the 40 inventive principles with sub-principles
-- `resources/contradiction_matrix.json` — 39×39 matrix skeleton with canonical entries (sparse; fallback reasoning required for empty cells)
+- `resources/contradiction_matrix.json` — full Altshuller 39×39 matrix (1190 populated cells out of 1482 non-diagonal; the 292 empty cells reflect contradictions for which Altshuller's analysis surfaced no dominant principle)
 - `resources/separation_principles.md` — four-axis decision procedure for physical contradictions, linked to the 40 principles
-- `resources/76_standard_solutions.md` — Su-Field standard solutions, 5-class taxonomy, diagnostic flow, most-cited sub-rules
+- `resources/76_standard_solutions.md` — full 5-class / subclass taxonomy of the 76 Standard Solutions with Su-Field algebra notation, diagnostic flow, and rule texts (reconciled from Salamatov 1999, Mann 2002, ICG Training & Consulting materials)
 - `resources/ariz_85c.md` — ARIZ-85C nine-part deep-analysis procedure with operational checklist
 - `resources/evolution_trends.md` — eight trends of engineering system evolution + S-curve framing for roadmapping
 - `resources/glossary.md` — operational definitions of every term used in the skill

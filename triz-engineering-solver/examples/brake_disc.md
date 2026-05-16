@@ -23,14 +23,18 @@ A secondary framing is also valid: improving **#39 Productivity** (braking event
 ## Step 3 — Matrix lookup
 
 From `resources/contradiction_matrix.json`:
-- Cell `10,17` is unpopulated in this skill's anchor set — *inferred* reasoning required.
-- Cell `39,27` → principles `[1, 35, 10, 38]` (anchor cell).
 
-Reasoning over the 40 principles for the 10↔17 pair surfaces these candidates:
-- **#19 Periodic action** — pulse-friction strategies
-- **#35 Parameter changes** — change thermal properties of material
-- **#17 Another dimension** — internal cooling channels
-- **#1 Segmentation** — divide disc into thermal zones
+- Cell `10,17` → principles **[35, 10, 21]**
+  - **#35 Parameter changes** — change thermal properties of material
+  - **#10 Preliminary action** — pre-conditioning the disc before high braking demand
+  - **#21 Skipping (Rushing through)** — high-rate process so heat doesn't have time to localise
+- Cell `39,27` → principles **[1, 35, 10, 38]**
+  - **#1 Segmentation** — divide disc into thermal zones
+  - **#35 Parameter changes** — material property change at temperature threshold
+  - **#10 Preliminary action** — pre-cool before braking events
+  - **#38 Strong oxidisers** — chemistry-level material engineering
+
+Both cells converge on **#35 Parameter changes** and **#10 Preliminary action** — strong signals that these principles should drive the leading concepts. Other principles useful for this contradiction but absent from the matrix cells (e.g. **#17 Another dimension** for internal cooling channels, **#36 Phase transitions** for latent-heat absorption) will be marked `Source: inferred` rather than `Source: matrix` in the concepts below.
 
 ## Step 4 — Su-Field
 
@@ -83,7 +87,7 @@ S1 = disc, S2 = brake pad, F = mechanical (friction) field. The interaction is *
 ### Concept 5 — Pulse-modulated braking (system-level, not disc-level)
 
 - **TRIZ principles**: #19 Periodic Action, #20 Continuity of useful action
-- **Source**: matrix-inferred (39,27 cell suggests #35 + #10 align)
+- **Source**: inferred (the 39,27 matrix cell suggests #1, #35, #10, #38 — Concept 5 brings in #19, #20 by reasoning about the temporal-resource available between braking events)
 - **Description**: Replace continuous clamping in cruise descents with high-frequency pulsed clamping coordinated with ABS hardware. Same average deceleration, but each off-pulse window allows local disc cooling.
 - **Resource utilized**: temporal resource (off-cycles between pulses).
 - **Implementation**: firmware change in ABS / brake-by-wire controller.
